@@ -1,4 +1,7 @@
 # This File Contains the Parent Class- Vehicle
+# TypeError: Vehicle.__init__() takes 4 positional arguments but 3 were given
+# v1=Vehicle("A1001",50)
+# print(v1.current_speed)
 
 class Vehicle:
     """Common Functionality for Every Vehicle in the Organization"""
@@ -7,6 +10,7 @@ class Vehicle:
         self.max_speed=max_speed
         self.current_speed=100
         self.engine_on=False
+
 
     def start_engine(self):
         if not self.engine_on:
@@ -40,17 +44,16 @@ class Vehicle:
             "max_speed":self.max_speed,
             "engine_on":self.engine_on
         }
-
         return print(p)
+    
+    def shout(self):
+        print("Shouting")
+
+        
 
 
 
-#v1=Vehicle("A1001",50)
-# v1.engine_on=True
-# v1.start_engine()
-# v1.current_speed=10
-# v1.accelarate(50)
-# v1.status()
-
-
+# v1=Vehicle("A1001",50,100)
+# #v1.current_speed=200
+# print(v1.current_speed)
 

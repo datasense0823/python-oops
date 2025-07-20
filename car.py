@@ -2,11 +2,17 @@
 
 from vehicle import Vehicle
 
+
 class Car(Vehicle):
     def __init__(self,number_plate:str,max_speed:int,fuel_capacity:int =50,ac_on:bool=False):
 
+        self.number_plate=number_plate
+        self.max_speed=max_speed
+        self.current_speed=100
+        self.engine_on=False
+
         #Variables inherited from Parent Class
-        super()._init__(number_plate,max_speed)_
+        # super()._init__(number_plate,max_speed)
 
         #Variables Defined in Child Class
         self.ac_on=ac_on
@@ -44,6 +50,8 @@ class Car(Vehicle):
                 "fuel":f"{self.fuel_level}/{self.fuel_capacity}"
             }
         )
+
+
 
 
 
