@@ -4,6 +4,7 @@
 # print(v1.current_speed)
 
 class Vehicle:
+    
     """Common Functionality for Every Vehicle in the Organization"""
     def __init__(self, number_plate:str, max_speed: int):
         self.number_plate=number_plate
@@ -44,7 +45,7 @@ class Vehicle:
             "max_speed":self.max_speed,
             "engine_on":self.engine_on
         }
-        return print(p)
+        return p
     
     def shout(self):
         print("Shouting")
